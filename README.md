@@ -98,45 +98,6 @@ NUM_ORDERS = 2500        # Number of orders
 MAX_ITEMS_PER_ORDER = 8  # Maximum items per order
 ```
 
-## 🎯 Use Cases
-
-This structured dataset is perfect for:
-
-- **Business Intelligence Practice**: Learn BI tools and techniques with realistic data
-- **Dashboard Development**: Create compelling visualizations in Power BI, Tableau, or similar tools
-- **SQL Learning**: Practice complex queries, joins, and analytical functions
-- **Data Science Projects**: Build predictive models and perform statistical analysis
-- **Database Design**: Test database schemas and optimization strategies
-- **Educational Purposes**: Teach data analysis concepts with real-world scenarios
-
-## 📊 Analysis Examples
-
-With this organized dataset, you can perform comprehensive analysis such as:
-
-### 🛒 Sales Analytics
-- Revenue trends by region and time period
-- Best-selling products by category
-- Customer lifetime value analysis
-- Seasonal purchasing patterns
-
-### 👥 Customer Insights
-- Customer segmentation analysis
-- Purchase behavior profiling
-- Geographic distribution studies
-- Payment preference analysis
-
-### 📦 Product Performance
-- Category performance comparison
-- Price optimization analysis
-- Inventory turnover studies
-- Cross-selling opportunities
-
-### 🏪 Store Operations
-- Regional performance analysis
-- Store efficiency metrics
-- Geographic expansion insights
-- Market penetration studies
-
 ## 🔄 Workflow
 
 1. **Data Generation**: Use `python/generate_synthetic_data.py` to create fresh datasets
@@ -158,39 +119,12 @@ The organized folder structure provides several advantages:
 
 ### 📁 `/data` Folder
 - **Clean Separation**: All generated datasets in one location
-- **Easy Access**: Direct path for BI tools and data import
-- **Version Control**: Track data changes and maintain data history
-- **Portability**: Easy to share or backup entire datasets
 
 ### 📁 `/python` Folder
 - **Code Organization**: All Python scripts in dedicated location
-- **Maintainability**: Easy to find, update, and extend functionality
-- **Reusability**: Scripts can be imported as modules
-- **Development**: Clear separation between code and data
 
 ### 📁 `/sql` Folder
 - **Future Ready**: Prepared space for SQL queries and scripts
-- **Database Integration**: Ready for database creation scripts
-- **Query Library**: Organize analytical queries and procedures
-- **Documentation**: Store SQL-based analysis and reporting scripts
-
-## 🚀 Next Steps
-
-This repository structure supports easy expansion:
-
-1. **Add SQL Scripts**: Create database schemas and analytical queries in `/sql`
-2. **Extend Python Scripts**: Add more data generators or analysis tools in `/python`
-3. **Data Versioning**: Maintain different dataset versions in `/data`
-4. **Documentation**: Add detailed analysis reports and findings
-5. **Integration**: Connect with BI tools, databases, or cloud platforms
-
-## 📧 Contributing
-
-Feel free to contribute by:
-- Adding new data generation features
-- Creating SQL analysis scripts
-- Improving data quality and realism
-- Enhancing documentation and examples
 
 ---
 
