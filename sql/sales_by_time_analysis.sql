@@ -10,16 +10,16 @@ BEGIN
     -- Daily Sales Analysis
     SELECT 
         'DAILY SALES' as analysis_type,
-        fs.sale_date as period_date,
+        dd.full_date as period_date,
         SUM(fs.sales_amount) as total_sales,
         AVG(fs.sales_amount) as average_sales,
         COUNT(*) as number_of_transactions
     FROM fact_sales fs
     INNER JOIN dim_date dd ON fs.date_key = dd.date_key
     WHERE dd.full_date BETWEEN start_date AND end_date
-    GROUP BY fs.sale_date
-    ORDER BY fs.sale_date;
-    
+    GROUP BY dd.full_date
+    ORDER BY dd.full_date;
+
     -- Monthly Sales Analysis
     SELECT 
         'MONTHLY SALES' as analysis_type,
