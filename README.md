@@ -15,7 +15,16 @@ Business-Intelligence-Analysis/
 ├── 📁 python/                  # Python scripts for data operations
 │   ├── generate_synthetic_data.py  # Main data generation script
 │   └── analyze_data.py         # Data analysis and insights script
-├── 📁 sql/                     # SQL scripts (ready for future queries)
+├── 📁 sql/                     # SQL database and analytics scripts
+│   ├── create_tables.sql       # Transactional database schema creation
+│   ├── create_dimention_tables.sql  # Star schema dimensional model
+│   ├── load_data.sql           # Data loading utilities
+│   ├── load_star_schema.sql    # ETL process for dimensional data
+│   ├── populate_date_dimension.sql  # Date dimension population
+│   ├── sales_by_time_analysis.sql   # Sales analysis by time periods
+│   ├── sales_by_product_category.sql  # Category and region analysis
+│   ├── customer_retention_analysis.sql  # Customer retention metrics
+│   └── payment_method_analysis.sql     # Payment method distribution
 ├── 📄 requirements.txt         # Python dependencies
 └── 📄 README.md               # Project documentation
 ```
@@ -29,6 +38,25 @@ The synthetic dataset simulates an e-commerce system with the following intercon
 - **Stores** (StoreID, StoreName, Region)
 - **Orders** (OrderID, OrderDate, CustomerID, StoreID, TotalAmount, PaymentMethod)
 - **OrderItems** (OrderID, ProductID, Quantity, UnitPrice)
+
+## 🎯 Business Intelligence Features
+
+### **Database Architecture**
+- **Transactional Schema**: Complete OLTP structure for day-to-day operations
+- **Star Schema**: Optimized dimensional model for analytics and reporting
+- **ETL Processing**: Automated data transformation from transactional to analytical format
+
+### **Analytics Capabilities**
+- **Time-based Analysis**: Sales trends by day, month, and year with date range filtering
+- **Geographic Analysis**: Sales performance by region and product category breakdown
+- **Customer Analytics**: Retention analysis based on order frequency patterns
+- **Payment Insights**: Distribution analysis of payment methods in top-performing regions
+
+### **Stored Procedures**
+- `GetSalesByTimePeriod()`: Comprehensive temporal sales analysis
+- `GetSalesTrendsByCategoryAndRegion()`: Product and geographic performance metrics
+- `GetCustomerRetentionByOrderFrequency()`: Customer loyalty and retention statistics
+- `GetPaymentMethodDistributionTopRegion()`: Payment method analysis for top revenue region
 
 ## 🚀 Features
 
@@ -69,9 +97,19 @@ pip install -r requirements.txt
    python python/generate_synthetic_data.py
    ```
 
-4. **Analyze the generated data**
+4. **Set up database structure**
    ```bash
-   python python/analyze_data.py
+   # Execute SQL scripts in your MySQL database
+   # 1. Create transactional tables: sql/create_tables.sql
+   # 2. Create dimensional model: sql/create_dimention_tables.sql
+   # 3. Populate date dimension: sql/populate_date_dimension.sql
+   ```
+
+5. **Load data and run analytics**
+   ```bash
+   # Load synthetic data into database
+   # Execute ETL process: sql/load_star_schema.sql
+   # Run business intelligence procedures as needed
    ```
 
 ## 📁 Generated Dataset
@@ -108,7 +146,7 @@ MAX_ITEMS_PER_ORDER = 8  # Maximum items per order
 
 ## 🛠️ Technologies Used
 
-- **Python 3.x**: Core programming language
+- **Python 3.12.10**: Core programming language
 - **Faker**: Realistic synthetic data generation
 - **Pandas**: Data manipulation and CSV export
 - **Structured Organization**: Modular folder structure for scalability
@@ -124,7 +162,7 @@ The organized folder structure provides several advantages:
 - **Code Organization**: All Python scripts in dedicated location
 
 ### 📁 `/sql` Folder
-- **Future Ready**: Prepared space for SQL queries and scripts
+- **SQL Operations**: Database schemas, ETL processes, and analytics queries
 
 ---
 
