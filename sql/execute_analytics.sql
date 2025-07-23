@@ -6,7 +6,7 @@
 -- ============================================================================
 SELECT 'EXECUTING: Sales Analysis by Time Periods' as analysis_step;
 
--- Analyze sales for the year 2023
+-- Analyze sales for whole years
 CALL GetSalesByTimePeriod('2023-01-01', '2023-12-31');
 
 -- ============================================================================
@@ -23,7 +23,7 @@ CALL GetSalesTrendsByCategoryAndRegion('2023-01-01', '2023-12-31');
 SELECT 'EXECUTING: Customer Retention Analysis' as analysis_step;
 
 -- Find customers with at least 5 orders (loyal customers)
-CALL GetCustomerRetentionByOrderFrequency(5);
+CALL GetCustomerRetentionByOrderFrequency(3);
 
 -- ============================================================================
 -- 4. PAYMENT METHOD DISTRIBUTION IN TOP REVENUE REGION
